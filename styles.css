@@ -74,8 +74,10 @@ body {
 
 #legend {
     position: absolute;
-    /* top: 610px;
-    left: 100px; */
+}
+
+svg {
+    overflow: hidden;
 }
 
 #tooltip {
@@ -92,10 +94,6 @@ body {
     font-weight: 800;
   font-family: 'Fira Sans',
   sans-serif;
-}
-
-svg{
-    overflow: hidden;
 }
 
 #heading{

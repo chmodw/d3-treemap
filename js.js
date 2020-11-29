@@ -1,4 +1,4 @@
-const width = 1160;
+const width = 1260;
 const height = 500;
 
 const svg = d3
@@ -11,7 +11,10 @@ d3.json(
   "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json"
 )
   .then((data) => {
-    let treemap = d3.treemap().size([width, height]).padding(1);
+    let treemap = d3
+      .treemap()
+      .size([width - 110, height])
+      .padding(1);
     let root = d3.hierarchy(data).sum((d) => d.value);
     treemap(root);
 
@@ -67,7 +70,7 @@ d3.json(
       .append("g")
       .attr("class", "legend-label")
       .attr("transform", function (d, i) {
-        return "translate(" + (-0 - i * 120) + ", 0)";
+        return "translate(100," + (height / 2 - i * 20) + ")";
       });
 
     // Adding the legend rectangles
