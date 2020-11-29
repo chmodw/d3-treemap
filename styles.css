@@ -63,6 +63,10 @@ body {
     position: relative;
 }
 
+#chart-container{
+    text-align: center;
+}
+
 #heading {
     text-align: center;
 }
