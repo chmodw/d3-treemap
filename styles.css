@@ -1,5 +1,5 @@
-/* font-family: 'Press Start 2P', cursive;  for display*/
-/* font-family: 'Orbitron', sans-serif;  for buttons*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap');
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -65,6 +65,7 @@ body {
 
 #chart-container{
     text-align: center;
+    height: 600px;
 }
 
 #heading {
@@ -73,8 +74,8 @@ body {
 
 #legend {
     position: absolute;
-    top: 710px;
-    left: 100px;
+    /* top: 610px;
+    left: 100px; */
 }
 
 #tooltip {
@@ -85,4 +86,18 @@ body {
     text-align: center;
     padding: 10px;
     border-radius: 5px;
+}
+
+.tile-text{
+    font-weight: 800;
+  font-family: 'Fira Sans',
+  sans-serif;
+}
+
+svg{
+    overflow: hidden;
+}
+
+#heading{
+    margin-bottom: 20px;
 }
