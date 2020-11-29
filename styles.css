@@ -84,9 +84,9 @@ svg {
     position: absolute;
     opacity: 0;
     background: #ffffca;
-    min-width: 200px;
-    text-align: center;
+    min-width: 300px;
     padding: 10px;
+    text-align: left;
     border-radius: 5px;
 }
 

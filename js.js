@@ -59,8 +59,29 @@ d3.json(
       .text((d) => d)
       .style("font-size", 10);
 
-    // adding the legend
+    // adding the tooltip
+    chart
+      .on("mouseover", (e, d) => {
+        d3.select("#tooltip")
+          .attr("data-value", d.data.value)
+          .html(
+            "<p>Name: " +
+              d.data.name +
+              "</p><p>Category: " +
+              d.data.category +
+              "</p><p>Value: " +
+              d.data.value +
+              "</p>"
+          )
+          .style("opacity", 1)
+          .style("left", e.pageX - 200 + "px")
+          .style("top", e.pageY - 150 + "px");
+      })
+      .on("mouseleave", (e, d) => {
+        d3.select("#tooltip").style("opacity", 0);
+      });
 
+    // adding the legend
     let legend = svg
       .append("g")
       .attr("id", "legend")
@@ -76,6 +97,7 @@ d3.json(
     // Adding the legend rectangles
     legend
       .append("rect")
+      .attr("class", "legend-item")
       .attr("x", width - 205)
       .attr("width", 18)
       .attr("height", 18)
